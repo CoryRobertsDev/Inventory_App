@@ -1,0 +1,91 @@
+﻿ <asp:Panel ID="Panel1" runat="server" Height="289px">
+                <asp:Label ID="Label1" runat="server" Text="Equipment Type:"></asp:Label>
+                <asp:TextBox ID="TextBox1" runat="server" Wrap="False"></asp:TextBox>
+                    <br />
+                <asp:Label ID="Label2" runat="server" Text="Vendor:"></asp:Label>
+                <asp:TextBox ID="TextBox2" runat="server" Width="173px"></asp:TextBox>
+                    <br />
+                <asp:Label ID="Label3" runat="server" Text="Manufacturer:"></asp:Label>
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="Label4" runat="server" Text="Model:"></asp:Label>
+                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="Label5" runat="server" Text="Sub-Model:"></asp:Label>
+                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="Label6" runat="server" Text="Serial Number:"></asp:Label>
+                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="Label7" runat="server" Text="UC Serial Number"></asp:Label>
+                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="Label8" runat="server" Text="Invoice Number:"></asp:Label>
+                <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                <  br />
+                <asp:Label ID="Label9" runat="server" Text="Date Received:"></asp:Label>
+                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="Label10" runat="server" Text="Requesting Dept.:"></asp:Label>
+                <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="Label11" runat="server" Text="Requested By:"></asp:Label>
+                <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="Label12" runat="server" Text="Warranty"></asp:Label>
+                :<asp:TextBox ID="TextBox12" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Button ID="Button1" runat="server" OnClick="Submit_Click" OnClientClick="this.form.reset();return false;" Text="Submit" />
+                <br />
+            </asp:Panel>
+
+			_____________________________
+
+			
+Imports System.Data
+Imports System.Data.SqlClient
+
+Partial Class Assignments
+    Inherits System.Web.UI.Page
+    'DATA SETS
+    '===========================================
+    Private slct_ds As SqlCommand
+    '===========================================
+
+    'Strings
+    '===========================================
+    Public errorString As String = String.Empty
+    Public dynamicString As String = String.Empty
+    '===========================================
+
+    'CONNECTION STRINGS
+    '===========================================
+    Private strConn As String = connectionString
+    Dim connectionString As String = ConfigurationManager.ConnectionStrings("ConString").ConnectionString
+    Private sqlCon As SqlConnection
+    '===========================================
+   l,
+
+            sqlComm.Parameters.AddWithValue("@EQUIP_TYPE", txtEQUIP_TYPE.Text)
+            sqlComm.Parameters.AddWithValue("@VENDOR", txtVENDOR.Text)
+            sqlComm.Parameters.AddWithValue("@MANUFACTURER", txtMANUFACTURER.Text)
+            sqlComm.Parameters.AddWithValue("@MODEL", txtMODEL.Text)
+            sqlComm.Parameters.AddWithValue("@SUB_MODEL", txtSUB_MODEL.Text)
+            sqlComm.Parameters.AddWithValue("@SERIAL_NUM", txtSERIAL_NUM.Text)
+            sqlComm.Parameters.AddWithValue("@UC_SERIAL_NUM", txtUC_SERIAL_NUM.Text)
+            sqlComm.Parameters.AddWithValue("@INVOICE_NUM", txtUC_SERIAL_NUM.Text)
+            sqlComm.Parameters.AddWithValue("@DATE_RECEIVED", DateTime.Parse(txtDATE_RECEIVED.Text))
+            sqlComm.Parameters.AddWithValue("@REQUESTING_DEPT", txtREQUESTING_DEP.Text)
+            sqlComm.Parameters.AddWithValue("@REQUESTED_BY", txtREQUESTED_BY.Text)
+            sqlComm.Parameters.AddWithValue("@WARRANTY", txtWARRANTY.Text)
+
+
+            sqlCon.Open()
+
+            sqlComm.ExecuteNonQuery()
+
+        End Using
+    End Sub
+
+End Class

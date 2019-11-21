@@ -1,0 +1,56 @@
+﻿
+Imports System.Data
+Imports System.Data.SqlClient
+
+Partial Class Assignments
+    Inherits System.Web.UI.Page
+    'DATA SETS
+    '===========================================
+    Private slct_ds As SqlCommand
+    '===========================================
+
+    'Strings
+    '===========================================
+    Public errorString As String = String.Empty
+    Public dynamicString As String = String.Empty
+    '===========================================
+
+    'CONNECTION STRINGS
+    '===========================================
+    Private strConn As String = connectionString
+    Dim connectionString As String = ConfigurationManager.ConnectionStrings("ConString").ConnectionString
+    Private sqlCon As SqlConnection
+    '===========================================
+    Private Sub InsertNewRecord()
+        sqlCon = New SqlConnection(strConn)
+
+        Using (sqlCon)
+
+            Dim sqlComm As New SqlCommand With {
+                .Connection = sqlCon,
+                .CommandText = "dbo.SYS_INSERT_ASSIGNMENT",
+                .CommandType = CommandType.StoredProcedure
+            }
+
+            sqlComm.Parameters.AddWithValue("@EQUIP_TYPE", txtEQUIP_TYPE.Text)
+            sqlComm.Parameters.AddWithValue("@VENDOR", txtVENDOR.Text)
+            sqlComm.Parameters.AddWithValue("@MANUFACTURER", txtMANUFACTURER.Text)
+            sqlComm.Parameters.AddWithValue("@MODEL", txtMODEL.Text)
+            sqlComm.Parameters.AddWithValue("@SUB_MODEL", txtSUB_MODEL.Text)
+            sqlComm.Parameters.AddWithValue("@SERIAL_NUM", txtSERIAL_NUM.Text)
+            sqlComm.Parameters.AddWithValue("@UC_SERIAL_NUM", txtUC_SERIAL_NUM.Text)
+            sqlComm.Parameters.AddWithValue("@INVOICE_NUM", txtUC_SERIAL_NUM.Text)
+            sqlComm.Parameters.AddWithValue("@DATE_RECEIVED", DateTime.Parse(txtDATE_RECEIVED.Text))
+            sqlComm.Parameters.AddWithValue("@REQUESTING_DEPT", txtREQUESTING_DEP.Text)
+            sqlComm.Parameters.AddWithValue("@REQUESTED_BY", txtREQUESTED_BY.Text)
+            sqlComm.Parameters.AddWithValue("@WARRANTY", txtWARRANTY.Text)
+
+
+            sqlCon.Open()
+
+            sqlComm.ExecuteNonQuery()
+
+        End Using
+    End Sub
+
+End Class

@@ -1,0 +1,87 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Repair_Insert.aspx.vb" Inherits="Repair_Insert" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="Repairs_Insert" runat="server">
+        <div>
+              <asp:Panel ID="pnlRepairsInsert" runat="server">
+
+                <asp:Label ID="lblEquipmentId" runat="server" Text="Equipment ID #: "></asp:Label>
+                <asp:TextBox ID="txtEquipment_Id" runat="server" Wrap="False"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblRequestedBy" runat="server" Text="Requested By: "></asp:Label>
+                  l<asp:TextBox ID="txtRequested_By" runat="server" Width="173px"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblRMA" runat="server" Text="RMA #: "></asp:Label>
+                <asp:TextBox ID="txt_RMA" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblShippedDate" runat="server" Text="Shipped Date: "></asp:Label>
+                <asp:TextBox ID="txtShipped_Date" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblTrackingNum" runat="server" Text="Tracking #: "></asp:Label>
+                <asp:TextBox ID="txtTracking_Num" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblRecipient" runat="server" Text="Recipient: "></asp:Label>
+                <asp:TextBox ID="txtRecipient" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblAddress1" runat="server" Text="Address 1: "></asp:Label>
+                <asp:TextBox ID="txtAddress_1" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblAddress2" runat="server" Text="Address 2: "></asp:Label>
+                <asp:TextBox ID="txtAddress_2" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblAddress3" runat="server" Text="Address 3: "></asp:Label>
+                <asp:TextBox ID="txtAddress_3" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblCity" runat="server" Text="City: "></asp:Label>
+                <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblState" runat="server" Text="State: "></asp:Label>
+                <asp:TextBox ID="txtState" runat="server"></asp:TextBox>
+                   <br />
+                <asp:Label ID="lblZip" runat="server" Text="Zip: "></asp:Label>
+                <asp:TextBox ID="txtZip" runat="server"></asp:TextBox>
+                   <br />
+                <asp:Label ID="lblCountry" runat="server" Text="Country: "></asp:Label>
+                <asp:TextBox ID="txtCountry" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblContactPhone" runat="server" Text="Contact Phone:"></asp:Label>
+                <asp:TextBox ID="txtContact_Phone" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblContactEmail" runat="server" Text="Contact Email: "></asp:Label>
+                <asp:TextBox ID="txtContact_Email" runat="server"></asp:TextBox>
+                    <br />
+               <%-- <asp:Label ID="lblReplacementSerialNum" runat="server" Text="Replacement Serial Num: "></asp:Label>
+                <asp:TextBox ID="txtReplacement_Serial_Num" runat="server"></asp:TextBox>
+                    <br />--%>
+                <asp:Label ID="lblManufacturer" runat="server" Text="Manufacturer: "></asp:Label>
+                <asp:TextBox ID="txtManufacturer" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblModel" runat="server" Text="Model"></asp:Label>
+                <asp:TextBox ID="txtModel" runat="server"></asp:TextBox>
+                    <br />
+                <asp:Label ID="lblSubModel" runat="server" Text="Sub Model:"></asp:Label>
+                <asp:TextBox ID="txtSub_Model" runat="server"></asp:TextBox>
+                     <br />
+                <asp:Label ID="lblSerialNum" runat="server" Text="Serial Num:"></asp:Label>
+                <asp:TextBox ID="txtSerial_Num" runat="server"></asp:TextBox>
+                     <br />
+                <asp:Label ID="lblUcSerialNum" runat="server" Text="UC Serial Num:"></asp:Label>
+                <asp:TextBox ID="txtUC_Serial_Num" runat="server"></asp:TextBox>
+                     <br />
+                <asp:Label ID="lblWarranty" runat="server" Text="Warranty: "></asp:Label>
+                <asp:TextBox ID="txtWarrany" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <br />
+            </asp:Panel>
+        </div>
+    </form>
+</body>
+</html>

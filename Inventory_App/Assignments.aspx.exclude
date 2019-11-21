@@ -1,0 +1,54 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Assignments.aspx.vb" Inherits="Assignments" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Assignment Insert</title>
+</head>
+<body style="height: 375px; width: 1093px">
+    <form id="Equipment_Form" runat="server">
+            <asp:Panel ID="pnlInsertAssignment" runat="server">
+
+                <asp:Label ID="lblASSIGNMENT_ID" runat="server" Text="Assignment_ID:"></asp:Label>
+                <asp:TextBox ID="txtEQUIP_TYPE" runat="server" Wrap="False"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblCOLLEAUGE_ID" runat="server" Text="Colleauge ID::"></asp:Label>
+                <asp:TextBox ID="txtCOLLEAUGE_ID" runat="server" Width="173px"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblEQUIPMENT_ID" runat="server" Text="Equipment ID::"></asp:Label>
+                <asp:TextBox ID="txtEQUIPMENT_ID" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblASSIGNED_BY" runat="server" Text="Assigned By::"></asp:Label>
+                <asp:TextBox ID="txtASSIGNED_BY" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblREQUESTED_BY" runat="server" Text="Requested By:"></asp:Label>
+                <asp:TextBox ID="txtREQUESTED_BY" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblREQUESTING_DEPT" runat="server" Text="Requesting Dept.:"></asp:Label>
+                <asp:TextBox ID="txtREQUESTING_DEPT" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblUC_SERIAL_NUM" runat="server" Text="UC Serial Number"></asp:Label>
+                <asp:TextBox ID="txtUC_SERIAL_NUM" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblSERIAL_NUM" runat="server" Text="Serial Num.:"></asp:Label>
+                <asp:TextBox ID="txtSERIAL_NUM" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblMODEL" runat="server" Text="Model:"></asp:Label>
+                <asp:TextBox ID="txtMODEL" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblMANUFACTURER" runat="server" Text="Manufacturer:"></asp:Label>
+                <asp:TextBox ID="txtMANUFACTURER" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="lblASSIGNED_DATE" runat="server" Text="Assigned Date:"></asp:Label>
+                :<asp:TextBox ID="txtlASSIGNED_DATE" runat="server"></asp:TextBox>
+                <br />
+                <br />
+              <%--  <asp:Button ID="Submit" runat="server" OnClick="Submit_Click" OnClientClick="this.form.reset();return false;" Text="Submit" />--%>
+                <asp:Label ID="lblSuccess" runat="server"></asp:Label>
+                <br />
+            </asp:Panel>
+
+</form>
+</body>
+</html>
